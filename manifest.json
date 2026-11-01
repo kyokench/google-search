@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "かんたんGoogle検索",
+  "version": "1.1.1",
+  "description": "アイコンの検索欄や、選択した文字の右クリックからGoogle検索を開きます。",
+  "permissions": ["contextMenus", "storage"],
+  "background": { "service_worker": "background.js" },
+  "action": {
+    "default_title": "Google検索を開く",
+    "default_popup": "popup.html",
+    "default_icon": { "16": "icons/icon-16.png", "32": "icons/icon-32.png", "48": "icons/icon-48.png", "128": "icons/icon-128.png" }
+  },
+  "icons": { "16": "icons/icon-16.png", "32": "icons/icon-32.png", "48": "icons/icon-48.png", "128": "icons/icon-128.png" }
+}

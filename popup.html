@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>かんたんGoogle検索</title>
+  <link rel="stylesheet" href="popup.css">
+  <script src="popup.js" defer></script>
+</head>
+<body>
+  <form id="search-form">
+    <label class="visually-hidden" for="query">検索キーワード</label>
+    <input id="query" type="search" placeholder="調べたい言葉を入力" autocomplete="off" required maxlength="2000" autofocus>
+    <button type="submit">Googleで検索 <span aria-hidden="true">↗</span></button>
+  </form>
+  <p id="error" role="alert" hidden></p>
+  <section aria-labelledby="history-title">
+    <div class="history-heading"><h2 id="history-title">最近の検索</h2><button id="clear-history" type="button" disabled>すべて削除</button></div>
+    <p id="history-empty">検索履歴はまだありません。</p>
+    <ul id="history-list"></ul>
+  </section>
+  <footer>Enterで検索 · 結果は新しいタブに開きます<br>選択した文字の右クリックからも検索できます。</footer>
+</body>
+</html>

@@ -1,0 +1,33 @@
+:root { color-scheme: light dark; font-family: "Segoe UI", "Yu Gothic UI", sans-serif; }
+* { box-sizing: border-box; }
+body { width: 350px; margin: 0; padding: 10px 12px 12px; background: #f7f9fe; color: #17233b; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+input { width: 100%; padding: 12px; border: 1px solid #ccd5e6; border-radius: 10px; font: inherit; font-size: 14px; background: #fff; color: #17233b; }
+input:focus { outline: 3px solid #c9ddff; border-color: #2563eb; }
+button { width: 100%; margin-top: 12px; padding: 12px; border: 0; border-radius: 10px; background: #2563eb; color: #fff; font: inherit; font-weight: 600; cursor: pointer; }
+button:hover { background: #1d4ed8; }
+button:focus-visible { outline: 3px solid #93b8ff; outline-offset: 3px; }
+button:disabled { opacity: .65; cursor: wait; }
+button span { margin-left: 6px; }
+footer { margin-top: 12px; font-size: 11px; line-height: 1.8; color: #63718a; }
+#error { color: #c32d38; font-size: 12px; }
+section { margin-top: 16px; }
+.history-heading { display: flex; align-items: center; justify-content: space-between; }
+h2 { margin: 0; font-size: 12px; }
+#clear-history { width: auto; margin: 0; padding: 5px; background: transparent; color: #63718a; font-size: 11px; }
+#history-empty { color: #63718a; font-size: 12px; }
+#history-list { list-style: none; padding: 0; margin: 6px 0 0; max-height: 210px; overflow-y: auto; }
+#history-list li { display: flex; gap: 4px; }
+#history-list button { margin: 0; padding: 9px 8px; background: transparent; color: inherit; font-size: 13px; font-weight: 400; }
+#history-list button:hover { background: #e4ecfc; }
+#history-list .history-query { flex: 1; min-width: 0; text-align: left; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+#history-list .history-remove { width: 30px; flex-shrink: 0; color: #63718a; }
+@media (prefers-color-scheme: dark) {
+  body { background: #161e2e; color: #edf3ff; }
+  footer { color: #a2b1ca; }
+  input { background: #222d42; color: #edf3ff; border-color: #46536d; }
+  input:focus { outline-color: #344e78; }
+  #error { color: #ffacb3; }
+  #clear-history, #history-empty, #history-list .history-remove { color: #a2b1ca; }
+  #history-list button:hover { background: #283b5c; }
+}
